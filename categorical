@@ -1,0 +1,13 @@
+import pandas as pd
+iris=pd.read_csv("iris.csv")
+
+iris['code']=pd.factorize(iris.Species)[0]
+
+iris.head()
+iris.tail();
+
+iris.Species.value_counts()
+
+or
+df['Species'].replace(['Iris-setosa', 'Iris-setosa '],
+						[0, 1], inplace=True)
